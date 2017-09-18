@@ -1,6 +1,5 @@
 var newGameBtn = document.getElementById('js-newGameButton');
 newGameBtn.addEventListener('click', newGame);
-
 var pickRock = document.getElementById('js-playerPick_rock');
 var pickPaper = document.getElementById('js-playerPick_paper');
 var pickScissors = document.getElementById('js-playerPick_scissors');
@@ -106,18 +105,17 @@ function checkRoundWinner(playerPick, computerPick) {
 };
 
 function win() {
-	 if (player.score >= 7) {
-    	gameState = 'ended'
-    	setGameElements();
-    	return alert('The winner is ' + player.name);
-
+    if (player.score >= 10) {
+        gameState = 'ended'
+        setGameElements();
+        return alert('The winner is ' + player.name);
     }
-    if (computer.score >= 7) {
-    	gameState = 'ended'
-    	setGameElements();
-    	return alert('The winner is computer');
+    if (computer.score >= 10) {
+        gameState = 'ended'
+        setGameElements();
+        return alert('The winner is computer');
     }
-}
+};
 
 
 function setGamePoints() {
