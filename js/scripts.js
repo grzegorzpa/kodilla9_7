@@ -56,12 +56,9 @@ function newGame() {
 };
 
 
-var x = Math.random();
-Math.floor(Math.random()*3);
-
 function getComputerPick() {
     var possiblePicks = ['rock', 'paper', 'scissors'];
-    return possiblePicks[Math.floor(Math.random()*3)];
+    return possiblePicks[Math.floor(Math.random() * 3)];
 };
 
 var playerPickElem = document.getElementById('js-playerPick');
@@ -101,17 +98,17 @@ function checkRoundWinner(playerPick, computerPick) {
         computerResultElem.innerHTML = "Win!";
         computerPointsElem.innerHTML = ++computer.score;
     }
-    win()
+    win();
 };
 
 function win() {
     if (player.score >= 10) {
-        gameState = 'ended'
+        gameState = 'ended';
         setGameElements();
         return alert('The winner is ' + player.name);
     }
     if (computer.score >= 10) {
-        gameState = 'ended'
+        gameState = 'ended';
         setGameElements();
         return alert('The winner is computer');
     }
